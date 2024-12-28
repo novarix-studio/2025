@@ -32,6 +32,47 @@
             text-decoration: underline;
         }
 
+        /* Hamburger-Menü (drei Striche) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        /* Dropdown-Menü */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown-menu a:hover {
+            background-color: #444;
+        }
+
+        /* Anzeigen des Dropdown-Menüs beim Klick */
+        .dropdown.active .dropdown-menu {
+            display: block;
+        }
+
         /* Hauptinhalt */
         .content {
             padding: 20px;
@@ -45,24 +86,49 @@
             color: white;
             line-height: 1.6;
         }
+
+        /* Für mobile Geräte */
+        @media (max-width: 768px) {
+            .navbar a {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .dropdown-menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <div class="navbar">
         <!-- Link zur Startseite -->
-        <a href="/2025/">Novarix Studio</a>
+        <a href="/2025/hamburg-roleplay/index.html">Novarix Studio</a>
+
+        <!-- Hamburger-Menü -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
         <!-- Dropdown-Menü -->
         <div class="dropdown">
-            <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
             <div class="dropdown-menu">
-                <a href="/2025/hamburg-roleplay/">Hamburg Roleplay</a>
-                <a href="/2025/hamburg-roleplay/Datenschutz/">Datenschutz</a>
+                <a href="/2025/hamburg-roleplay/index.html">Hamburg Roleplay</a>
+                <a href="/2025/hamburg-roleplay/Datenschutz/index.html">Datenschutz</a>
                 <!-- Weitere Links können hier hinzugefügt werden -->
             </div>
         </div>
@@ -75,7 +141,7 @@
 
         <h2>1. Verantwortliche Stelle</h2>
         <p>Verantwortlich für die Datenverarbeitung im Rahmen von "Hamburg Roleplay" ist:</p>
-        <p>Max Mustermann<br>
+        <p>Lenny Spengler<br>
         Musterstraße 1<br>
         12345 Musterstadt<br>
         E-Mail: <a href="mailto:kontakt@hamburgroleplay.de">kontakt@hamburgroleplay.de</a></p>
@@ -108,5 +174,13 @@
         <h2>6. Änderungen an dieser Datenschutzerklärung</h2>
         <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf zu ändern, um sie an rechtliche oder technische Entwicklungen anzupassen. Die aktuelle Version ist immer auf unserer Website verfügbar.</p>
     </div>
+
+    <script>
+        // Funktion zum Umschalten des Dropdown-Menüs
+        function toggleMenu() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
