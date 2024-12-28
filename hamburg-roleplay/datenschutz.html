@@ -57,6 +57,7 @@
             background-color: #333;
             border-radius: 5px;
             width: 200px;
+            z-index: 10;
         }
         .dropdown-menu a {
             display: block;
@@ -71,20 +72,6 @@
         /* Anzeigen des Dropdown-Menüs beim Klick */
         .dropdown.active .dropdown-menu {
             display: block;
-        }
-
-        /* Hauptinhalt */
-        .content {
-            padding: 20px;
-        }
-
-        h1, h2 {
-            color: white;
-        }
-
-        p {
-            color: white;
-            line-height: 1.6;
         }
 
         /* Für mobile Geräte */
@@ -108,6 +95,12 @@
                 justify-content: center;
                 align-items: center;
             }
+
+            .dropdown-menu a {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -127,7 +120,7 @@
         <!-- Dropdown-Menü -->
         <div class="dropdown">
             <div class="dropdown-menu">
-                <a href="/2025/hamburg-roleplay/index.html">Hamburg Roleplay</a>
+                <a href="/2025/hamburg-roleplay/index.html">Startseite</a>
                 <a href="/2025/hamburg-roleplay/Datenschutz/index.html">Datenschutz</a>
                 <!-- Weitere Links können hier hinzugefügt werden -->
             </div>
@@ -141,7 +134,7 @@
 
         <h2>1. Verantwortliche Stelle</h2>
         <p>Verantwortlich für die Datenverarbeitung im Rahmen von "Hamburg Roleplay" ist:</p>
-        <p>Lenny Spengler<br>
+        <p>Max Mustermann<br>
         Musterstraße 1<br>
         12345 Musterstadt<br>
         E-Mail: <a href="mailto:kontakt@hamburgroleplay.de">kontakt@hamburgroleplay.de</a></p>
