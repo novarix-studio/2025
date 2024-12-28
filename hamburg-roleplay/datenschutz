@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburg Roleplay</title>
+    <style>
+        /* Stil für den gesamten Hintergrund und die Schriftfarbe */
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Stil für die Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dropdown-Menü-Stil */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #444;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .dropdown-menu a:hover {
+            background-color: #555;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Hamburger-Menü-Stil */
+        .hamburger {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar">
+        <!-- Link zur Startseite -->
+        <a href="/2025/">Novarix Studio</a>
+
+        <!-- Dropdown-Menü -->
+        <div class="dropdown">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="dropdown-menu">
+                <a href="/2025/hamburg-roleplay/">Hamburg Roleplay</a>
+                <a href="/2025/hamburg-roleplay/datenschutz/">Datenschutz</a>
+                <!-- Weitere Links können hier hinzugefügt werden -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <h1>Hamburg Roleplay – Datenschutzerklärung</h1>
+    <p>
+        Hamburg Roleplay ist ein Discord-Server für alle Fans des Roblox-Spiels <strong>Notruf Hamburg</strong>.
+        Hier organisieren wir spannende und realistische Roleplay-Sessions in der detailgetreuen Stadt Hamburg.
+        Egal, ob du als Polizist, Feuerwehrmann, Sanitäter oder Bürger spielst – bei uns steht authentisches RP
+        im Vordergrund.
+    </p>
+    <p>
+        Wir nutzen den Server, um Spielzeiten zu planen, Regeln zu klären und gemeinsam Ideen für spannende Szenarien
+        zu entwickeln. Unsere Community legt großen Wert auf Teamarbeit, Kreativität und ein respektvolles Miteinander.
+    </p>
+    <p>
+        Tritt <strong>Hamburg Roleplay</strong> bei und werde Teil einer lebendigen RP-Community im beliebten Spiel
+        <strong>Notruf Hamburg</strong>!
+    </p>
+</body>
+</html>
