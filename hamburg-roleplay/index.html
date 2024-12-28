@@ -16,8 +16,11 @@
 
         /* Stil für die Navigation */
         .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #333;
-            padding: 10px;
+            padding: 10px 20px;
         }
         .navbar a {
             color: white;
@@ -28,13 +31,65 @@
         .navbar a:hover {
             text-decoration: underline;
         }
+
+        /* Dropdown-Menü-Stil */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #444;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .dropdown-menu a:hover {
+            background-color: #555;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Hamburger-Menü-Stil */
+        .hamburger {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <div class="navbar">
-        <!-- Absoluter Link zur Startseite -->
-        <a href="/2025/">Novarix Studio</a>
+        <!-- Link zur Startseite -->
+        <a href="/novarix-studio.github.io/index.html">Novarix Studio</a>
+
+        <!-- Dropdown-Menü -->
+        <div class="dropdown">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="dropdown-menu">
+                <a href="/novarix-studio.github.io/hamburg-roleplay/index.html">Hamburg Roleplay</a>
+                <a href="/novarix-studio.github.io/hamburg-roleplay/Datenschutz/index.html">Datenschutz</a>
+                <!-- Weitere Links können hier hinzugefügt werden -->
+            </div>
+        </div>
     </div>
 
     <!-- Hauptinhalt -->
@@ -44,6 +99,10 @@
         Hier organisieren wir spannende und realistische Roleplay-Sessions in der detailgetreuen Stadt Hamburg.
         Egal, ob du als Polizist, Feuerwehrmann, Sanitäter oder Bürger spielst – bei uns steht authentisches RP
         im Vordergrund.
+    </p>
+    <p>
+        Wir nutzen den Server, um Spielzeiten zu planen, Regeln zu klären und gemeinsam Ideen für spannende Szenarien
+        zu entwickeln. Unsere Community legt großen Wert auf Teamarbeit, Kreativität und ein respektvolles Miteinander.
     </p>
     <p>
         Tritt <strong>Hamburg Roleplay</strong> bei und werde Teil einer lebendigen RP-Community im beliebten Spiel
