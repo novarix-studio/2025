@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutzerklärung - Hamburg Roleplay</title>
     <style>
-        /* Stil für den gesamten Hintergrund und die Schriftfarbe */
+        /* Allgemeine Einstellungen */
         body {
             background-color: black;
             color: white;
@@ -14,7 +14,7 @@
             padding: 0;
         }
 
-        /* Stil für die Navigation */
+        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -22,12 +22,15 @@
             background-color: #333;
             padding: 10px 20px;
         }
+
+        /* Link zur Startseite */
         .navbar a {
             color: white;
             text-decoration: none;
             font-size: 1.2em;
             font-weight: bold;
         }
+
         .navbar a:hover {
             text-decoration: underline;
         }
@@ -41,6 +44,7 @@
             width: 30px;
             cursor: pointer;
         }
+
         .hamburger div {
             width: 30px;
             height: 4px;
@@ -59,17 +63,19 @@
             width: 200px;
             z-index: 10;
         }
+
         .dropdown-menu a {
             display: block;
             padding: 10px;
             color: white;
             text-decoration: none;
         }
+
         .dropdown-menu a:hover {
             background-color: #444;
         }
 
-        /* Für mobile Geräte */
+        /* Mobile Ansicht (Dropdown wird hier angezeigt) */
         @media (max-width: 768px) {
             .navbar a {
                 display: none;
@@ -98,6 +104,7 @@
             }
         }
 
+        /* Menü sichtbar */
         .dropdown-menu.show {
             display: block;
         }
@@ -106,7 +113,6 @@
 <body>
     <!-- Navigation -->
     <div class="navbar">
-        <!-- Link zur Startseite -->
         <a href="/2025/hamburg-roleplay/index.html">Novarix Studio</a>
 
         <!-- Hamburger-Menü -->
@@ -123,7 +129,7 @@
         </div>
     </div>
 
-    <!-- Datenschutzerklärung -->
+    <!-- Datenschutzerklärung Inhalt -->
     <div class="content">
         <h1>Datenschutzerklärung für Hamburg Roleplay</h1>
         <p>Wir freuen uns über dein Interesse an unserem Projekt "Hamburg Roleplay". Der Schutz deiner persönlichen Daten ist uns wichtig. Nachfolgend erläutern wir, welche Daten wir erheben, wie wir sie nutzen und welche Rechte du hast.</p>
@@ -165,6 +171,7 @@
     </div>
 
     <script>
+        // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
             const dropdownMenu = document.getElementById("dropdownMenu");
             dropdownMenu.classList.toggle("show");
