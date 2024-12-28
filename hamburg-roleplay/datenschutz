@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburg Roleplay</title>
+    <title>Datenschutzerklärung - Hamburg Roleplay</title>
     <style>
         /* Stil für den gesamten Hintergrund und die Schriftfarbe */
         body {
@@ -32,42 +32,18 @@
             text-decoration: underline;
         }
 
-        /* Dropdown-Menü-Stil */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #444;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-        .dropdown-menu a {
-            display: block;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-        }
-        .dropdown-menu a:hover {
-            background-color: #555;
-        }
-        .dropdown:hover .dropdown-menu {
-            display: block;
+        /* Hauptinhalt */
+        .content {
+            padding: 20px;
         }
 
-        /* Hamburger-Menü-Stil */
-        .hamburger {
-            display: inline-block;
-            cursor: pointer;
+        h1, h2 {
+            color: white;
         }
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 5px 0;
+
+        p {
+            color: white;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -86,27 +62,51 @@
             </div>
             <div class="dropdown-menu">
                 <a href="/2025/hamburg-roleplay/">Hamburg Roleplay</a>
-                <a href="/2025/hamburg-roleplay/datenschutz/">Datenschutz</a>
+                <a href="/2025/hamburg-roleplay/Datenschutz/">Datenschutz</a>
                 <!-- Weitere Links können hier hinzugefügt werden -->
             </div>
         </div>
     </div>
 
-    <!-- Hauptinhalt -->
-    <h1>Hamburg Roleplay – Datenschutzerklärung</h1>
-    <p>
-        Hamburg Roleplay ist ein Discord-Server für alle Fans des Roblox-Spiels <strong>Notruf Hamburg</strong>.
-        Hier organisieren wir spannende und realistische Roleplay-Sessions in der detailgetreuen Stadt Hamburg.
-        Egal, ob du als Polizist, Feuerwehrmann, Sanitäter oder Bürger spielst – bei uns steht authentisches RP
-        im Vordergrund.
-    </p>
-    <p>
-        Wir nutzen den Server, um Spielzeiten zu planen, Regeln zu klären und gemeinsam Ideen für spannende Szenarien
-        zu entwickeln. Unsere Community legt großen Wert auf Teamarbeit, Kreativität und ein respektvolles Miteinander.
-    </p>
-    <p>
-        Tritt <strong>Hamburg Roleplay</strong> bei und werde Teil einer lebendigen RP-Community im beliebten Spiel
-        <strong>Notruf Hamburg</strong>!
-    </p>
+    <!-- Datenschutzerklärung -->
+    <div class="content">
+        <h1>Datenschutzerklärung für Hamburg Roleplay</h1>
+        <p>Wir freuen uns über dein Interesse an unserem Projekt "Hamburg Roleplay". Der Schutz deiner persönlichen Daten ist uns wichtig. Nachfolgend erläutern wir, welche Daten wir erheben, wie wir sie nutzen und welche Rechte du hast.</p>
+
+        <h2>1. Verantwortliche Stelle</h2>
+        <p>Verantwortlich für die Datenverarbeitung im Rahmen von "Hamburg Roleplay" ist:</p>
+        <p>Max Mustermann<br>
+        Musterstraße 1<br>
+        12345 Musterstadt<br>
+        E-Mail: <a href="mailto:kontakt@hamburgroleplay.de">kontakt@hamburgroleplay.de</a></p>
+
+        <h2>2. Erhobene Daten und deren Nutzung</h2>
+        <p>Im Rahmen der Organisation und Durchführung von "Hamburg Roleplay" erheben wir folgende Daten:</p>
+        <ul>
+            <li><strong>Discord-Daten:</strong> Wenn du unseren Discord-Server nutzt, werden dein Discord-Name und deine Discord-ID verarbeitet, um die Kommunikation zu ermöglichen und die Teilnahme an RP-Sessions zu organisieren.</li>
+            <li><strong>Spielerdaten:</strong> Informationen, die du uns freiwillig mitteilst, wie z. B. dein Roblox-Benutzername, um dich in das Spiel zu integrieren.</li>
+            <li><strong>Kommunikationsdaten:</strong> Nachrichten und Interaktionen im Discord-Server oder über andere Kommunikationswege, die für die Organisation und das Rollenspiel relevant sind.</li>
+        </ul>
+        <p>Die Daten werden ausschließlich zur Organisation des Spiels und zur Kommunikation innerhalb der Community genutzt.</p>
+
+        <h2>3. Speicherung und Löschung von Daten</h2>
+        <p>Die Daten werden nur so lange gespeichert, wie sie für die Durchführung und Organisation von "Hamburg Roleplay" erforderlich sind.</p>
+        <p>Nach Beendigung deiner Teilnahme werden die Daten gelöscht, es sei denn, gesetzliche Vorschriften schreiben eine längere Aufbewahrung vor.</p>
+
+        <h2>4. Weitergabe von Daten</h2>
+        <p>Wir geben deine Daten nicht an Dritte weiter. Deine Daten bleiben ausschließlich innerhalb des Projekts "Hamburg Roleplay".</p>
+
+        <h2>5. Deine Rechte</h2>
+        <p>Du hast jederzeit das Recht:</p>
+        <ul>
+            <li>Auskunft über die von uns gespeicherten Daten zu erhalten.</li>
+            <li>Berichtigung, Löschung oder Einschränkung der Verarbeitung deiner Daten zu verlangen.</li>
+            <li>Deine Einwilligung zur Verarbeitung deiner Daten zu widerrufen.</li>
+        </ul>
+        <p>Um diese Rechte auszuüben, kannst du uns über die oben angegebene E-Mail-Adresse kontaktieren.</p>
+
+        <h2>6. Änderungen an dieser Datenschutzerklärung</h2>
+        <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf zu ändern, um sie an rechtliche oder technische Entwicklungen anzupassen. Die aktuelle Version ist immer auf unserer Website verfügbar.</p>
+    </div>
 </body>
 </html>
