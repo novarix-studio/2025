@@ -157,27 +157,29 @@ footer {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     border-radius: 50%; /* Kreisform */
-    padding: 10px;
+    padding: 0;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-    transform: scale(1.1);
+    display: flex;
+    justify-content: center; /* Zentriert die Symbole horizontal */
+    align-items: center; /* Zentriert die Symbole vertikal */
 }
 
 /* Symbole im Umschalter */
-#sun-icon {
-    display: block;
-    font-size: 20px;
-    color: #ffcc00;
-}
-
-#moon-icon {
-    display: none;
+#sun-icon, #moon-icon {
     font-size: 20px;
     color: #555555;
+}
+
+/* Symbol für Sonne */
+#sun-icon {
+    display: block;
+}
+
+/* Symbol für Mond */
+#moon-icon {
+    display: none;
 }
 
 /* Dunkelmodus */
