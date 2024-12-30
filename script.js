@@ -1,38 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    const body = document.body;
-    const sunIcon = document.getElementById('sun-icon');
-    const moonIcon = document.getElementById('moon-icon');
+// Navigation umschalten
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-    // Prüfe, ob der gespeicherte Modus 'dark' ist
-    const savedMode = localStorage.getItem('theme');
-    if (savedMode === 'dark') {
-        body.classList.add('dark-mode');
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navToggle.querySelectorAll('span').forEach(span => span.classList.toggle('active'));
+});
+
+// Script für den Umschalter zwischen Dark- und Light-Mode
+const toggleButton = document.querySelector('.dark-mode-toggle');
+
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Ändert den Text des Buttons je nach Modus
+    if (document.body.classList.contains('dark-mode')) {
+        toggleButton.textContent = 'Light Mode';
+    } else {
+        toggleButton.textContent = 'Dark Mode';
     }
+});
 
-    // Dark Mode umschalten
-    toggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        // Wechsel der Icons und Text des Buttons
-        if (body.classList.contains('dark-mode')) {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-            localStorage.removeItem('theme');
-        }
-    });
+// Modus speichern
+if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+} else {
+    localStorage.removeItem('theme');
+}
 
-    // Navigation umschalten (Für kleinere Bildschirme)
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        navToggle.querySelectorAll('span').forEach(span => span.classList.toggle('active'));
-    });
+// Beim Laden den Modus überprüfen
+window.addEventListener('load', () => {
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        document.querySelectorAll('header, footer').forEach(element => element.classList.add('dark-mode'));
+    }
 });
