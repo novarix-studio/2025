@@ -1,13 +1,12 @@
-// Funktion zum Umschalten des Dunkelmodus
+// Dunkelmodus umschalten
 const toggleButton = document.getElementById('dark-mode-toggle');
 const body = document.body;
 
-// Wechsel zwischen Dunkelmodus und Hellem Modus
 toggleButton.addEventListener('click', () => {
-    // Umschalten der Klasse für Dunkelmodus
     body.classList.toggle('dark-mode');
+    document.querySelectorAll('header, footer').forEach(element => element.classList.toggle('dark-mode'));
 
-    // Speichern des Modus in localStorage, damit er beim nächsten Laden erhalten bleibt
+    // Modus speichern
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
     } else {
@@ -15,9 +14,10 @@ toggleButton.addEventListener('click', () => {
     }
 });
 
-// Überprüfen, ob der Dunkelmodus beim Laden der Seite aktiviert werden soll
+// Beim Laden den Modus überprüfen
 window.addEventListener('load', () => {
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
+        document.querySelectorAll('header, footer').forEach(element => element.classList.add('dark-mode'));
     }
 });
