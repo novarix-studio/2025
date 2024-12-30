@@ -1,95 +1,106 @@
-/* Grundlegendes Design für den hellen Modus */
+/* Allgemeines Design */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Header */
 header {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px 10px;
+    color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main */
+main {
     padding: 20px;
     text-align: center;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #f5f5f5;
-    margin-top: 20px;
-    transition: opacity 0.3s ease;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Heller Modus */
-body:not(.dark-mode) footer {
-    opacity: 1; /* Sichtbar im hellen Modus */
-}
-
-/* Dunkelmodus - Hier anpassen */
-body.dark-mode {
-    background-color: #333333;
-    color: #f5f5f5;
-}
-
-header.dark-mode {
-    background-color: #555555;
-}
-
-footer.dark-mode {
-    background-color: #444444;
-    color: #ccc;
-    opacity: 0.5; /* Weniger sichtbar im Dunkelmodus */
-}
-
-/* Stil für den Umschalter */
+/* Umschalter für den Dunkelmodus */
 .dark-mode-toggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #ffffff;
+    border: 1px solid #cccccc;
     padding: 10px;
     border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover-Effekt für den Umschalter */
 .dark-mode-toggle:hover {
-    background-color: #f0f0f0;
+    transform: scale(1.1);
 }
 
-/* Icons sichtbar machen (Sonne im Hellen, Mond im Dunkeln) */
+/* Symbole im Umschalter */
 #sun-icon {
-    display: none;
+    display: block;
+    font-size: 20px;
+    color: #ffcc00;
 }
 
 #moon-icon {
-    display: block;
+    display: none;
+    font-size: 20px;
+    color: #555555;
 }
 
-/* Dunkelmodus: Sonne verstecken und Mond anzeigen */
+/* Dunkelmodus */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+header.dark-mode {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+footer.dark-mode {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+/* Umschalter im Dunkelmodus */
+body.dark-mode .dark-mode-toggle {
+    background-color: #333333;
+    border-color: #555555;
+}
+
 body.dark-mode #sun-icon {
-    display: block;
-}
-
-body.dark-mode #moon-icon {
     display: none;
 }
 
-/* Medienabfragen für mobile Geräte */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
+body.dark-mode #moon-icon {
+    display: block;
+}
 
+/* Responsivität */
+@media (max-width: 600px) {
     .dark-mode-toggle {
         bottom: 10px;
         right: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
     }
 }
