@@ -19,6 +19,23 @@ h1, h2 {
     margin: 20px 0;
 }
 
+/* Hinweis Text - Zentrierung und Abstand */
+#about {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px; /* Maximalbreite setzen */
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 /* Navigation */
 .navbar {
     display: flex;
@@ -29,10 +46,21 @@ h1, h2 {
     color: #ffffff;
 }
 
+.navbar .nav-brand {
+    margin-left: 20px; /* Abstand von der linken Seite */
+}
+
+.navbar .nav-brand a {
+    text-decoration: none;
+    color: #ffffff; /* Gleiche Farbe wie der restliche Text */
+    font-size: 1.5rem;
+}
+
 .nav-menu {
     display: flex;
     gap: 15px;
     list-style: none;
+    margin-left: auto; /* Links wird der Abstand gleichmäßig, rechts der Abstand der Navigation wird größer */
 }
 
 .nav-menu a {
