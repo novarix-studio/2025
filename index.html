@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Meine Website bietet kreative digitale Lösungen, die Ihr Unternehmen nach vorne bringen.">
+    <meta name="keywords" content="Webentwicklung, Design, digitale Lösungen, Technologie">
+    <meta name="author" content="Dein Name oder Dein Unternehmen">
+    <meta property="og:title" content="Meine Website">
+    <meta property="og:description" content="Meine Website bietet kreative digitale Lösungen.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/thumbnail.jpg"> <!-- Dein Thumbnail Bild -->
     <title>Meine Website</title>
 
     <!-- Favicon hinzufügen (passen Sie den Pfad zu Ihrem Favicon an) -->
     <link rel="icon" href="assets/favicon.ico">
+
+    <!-- Externe CSS-Bibliothek für responsives Design (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Verknüpfen Sie das CSS-Stylesheet -->
     <link rel="stylesheet" href="styles.css">
@@ -37,9 +47,9 @@
     </footer>
 
     <!-- Umschalter für Dunkelmodus (unten rechts) -->
-    <div id="dark-mode-toggle" class="dark-mode-toggle">
-        <span id="sun-icon">&#9728;</span> <!-- Sonne (heller Modus) -->
-        <span id="moon-icon">&#9790;</span> <!-- Mond (dunkler Modus) -->
+    <div id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Dunkelmodus umschalten">
+        <span id="sun-icon" class="icon" aria-hidden="true">&#9728;</span> <!-- Sonne (heller Modus) -->
+        <span id="moon-icon" class="icon" aria-hidden="true">&#9790;</span> <!-- Mond (dunkler Modus) -->
     </div>
 </body>
 </html>
