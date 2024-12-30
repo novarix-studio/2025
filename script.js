@@ -9,24 +9,18 @@ navToggle.addEventListener('click', () => {
 
 // Script für den Umschalter zwischen Dark- und Light-Mode
 const toggleButton = document.querySelector('.dark-mode-toggle');
+const body = document.body; // body muss korrekt definiert sein
 
 toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+    body.classList.toggle('dark-mode');
     
     // Ändert den Text des Buttons je nach Modus
-    if (document.body.classList.contains('dark-mode')) {
+    if (body.classList.contains('dark-mode')) {
         toggleButton.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'dark'); // Speichern des Dark Mode
     } else {
         toggleButton.textContent = 'Dark Mode';
-    }
-});
-
-
-    // Modus speichern
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.removeItem('theme');
+        localStorage.removeItem('theme'); // Entfernen, falls nicht Dark Mode
     }
 });
 
@@ -34,6 +28,8 @@ toggleButton.addEventListener('click', () => {
 window.addEventListener('load', () => {
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
-        document.querySelectorAll('header, footer').forEach(element => element.classList.add('dark-mode'));
+        toggleButton.textContent = 'Light Mode'; // Sicherstellen, dass der Text synchron ist
+    } else {
+        toggleButton.textContent = 'Dark Mode';
     }
 });
