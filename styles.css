@@ -168,7 +168,7 @@ footer {
 
 /* Symbole im Umschalter */
 #sun-icon, #moon-icon {
-    font-size: 20px;
+    font-size: 24px; /* Größere Symbole */
     color: #555555;
 }
 
