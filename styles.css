@@ -45,6 +45,7 @@ h1, h2 {
     background-color: #333333;
     color: #ffffff;
     position: relative;
+    transition: background-color 0.3s ease;
 }
 
 .navbar .nav-brand {
@@ -186,8 +187,32 @@ body.dark-mode {
     color: #eaeaea;
 }
 
+/* Farben und Hintergründe für den Dark-Mode */
 body.dark-mode header,
 body.dark-mode footer {
     background-color: #333333;
     color: #eaeaea;
+}
+
+body.dark-mode .navbar {
+    background-color: #222222;
+    color: #eaeaea;
+}
+
+body.dark-mode .nav-menu a {
+    color: #eaeaea;
+}
+
+body.dark-mode .nav-menu a:hover {
+    background-color: #444444;
+}
+
+body.dark-mode #about h2,
+body.dark-mode #about p {
+    color: #eaeaea;
+}
+
+/* Übergänge für das Umschalten */
+body, header, footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
