@@ -59,11 +59,12 @@ footer.dark-mode {
     transition: background-color 0.3s;
 }
 
+/* Hover-Effekt für den Umschalter */
 .dark-mode-toggle:hover {
     background-color: #f0f0f0;
 }
 
-/* Verstecken der Icons im Dunkelmodus/hellen Modus */
+/* Icons sichtbar machen (Sonne im Hellen, Mond im Dunkeln) */
 #sun-icon {
     display: none;
 }
@@ -79,4 +80,16 @@ body.dark-mode #sun-icon {
 
 body.dark-mode #moon-icon {
     display: none;
+}
+
+/* Medienabfragen für mobile Geräte */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .dark-mode-toggle {
+        bottom: 10px;
+        right: 10px;
+    }
 }
