@@ -127,7 +127,6 @@ h1, h2 {
 
 /* Auf kleineren Bildschirmen */
 @media (max-width: 768px) {
-    /* Auf kleineren Bildschirmen */
     .nav-menu {
         display: none; /* Standardmäßig ausgeblendet */
     }
