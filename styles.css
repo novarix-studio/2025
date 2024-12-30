@@ -14,17 +14,17 @@ header {
     text-align: center;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    transition: opacity 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Heller Modus */
+body:not(.dark-mode) footer {
+    opacity: 1; /* Sichtbar im hellen Modus */
 }
 
 /* Dunkelmodus - Hier anpassen */
@@ -37,18 +37,46 @@ header.dark-mode {
     background-color: #555555;
 }
 
-footer {
-    text-align: center;
+footer.dark-mode {
+    background-color: #444444;
+    color: #ccc;
+    opacity: 0.5; /* Weniger sichtbar im Dunkelmodus */
+}
+
+/* Stil für den Umschalter */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
     padding: 10px;
-    background-color: #f5f5f5;
-    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
 }
 
-/* Dunkelmodus Stil für den Button */
-button.dark-mode {
-    background-color: #888888;
+.dark-mode-toggle:hover {
+    background-color: #f0f0f0;
 }
 
-button.dark-mode:hover {
-    background-color: #777777;
+/* Verstecken der Icons im Dunkelmodus/hellen Modus */
+#sun-icon {
+    display: none;
+}
+
+#moon-icon {
+    display: block;
+}
+
+/* Dunkelmodus: Sonne verstecken und Mond anzeigen */
+body.dark-mode #sun-icon {
+    display: block;
+}
+
+body.dark-mode #moon-icon {
+    display: none;
 }
