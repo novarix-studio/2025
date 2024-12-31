@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,61 +7,52 @@
     <meta name="description" content="Novarix Studio, Discord Bot Entwicklung.">
     <meta name="keywords" content="Novarix Studio, Novarix, Studio, Discord, Bot Entwicklung, German, Roleplay, Roblox">
     <meta name="author" content="Novarix Studio">
-    <meta property="og:title" content="Novarix Studio">
-    <meta property="og:description" content="Professionelle Discord-Bot-Entwicklung und Lösungen für Roleplay und Roblox.">
-    <meta property="og:image" content="https://novarix-studio.de/assets/favicon.png">
-    <meta property="og:url" content="https://novarix-studio.de">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Novarix Studio">
-    <meta name="twitter:description" content="Professionelle Discord-Bot-Entwicklung und Lösungen für Roleplay und Roblox.">
-    <meta name="twitter:image" content="https://novarix-studio.de/assets/favicon.png">
     <title>Novarix Studio</title>
-
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico">
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-
     <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
-
 <body>
     <header>
-        <nav class="navbar">
-            <!-- Burger-Menü-Button -->
-            <button class="nav-toggle" aria-label="Navigation umschalten" onclick="toggleBurgerMenu()">
+        <div class="navbar">
+            <div class="nav-brand">
+                <h1>Novarix Studio</h1>
+            </div>
+            <button class="nav-toggle" aria-label="Navigation umschalten">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-        </nav>
+            <button class="settings-toggle" aria-label="Einstellungen umschalten">
+                ⚙️
+            </button>
+        </div>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>Hinweis</h2>
-            <p>Diese Website wird derzeit erstellt. Schauen Sie später vorbei: kontakt@novarix-studio.de.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Novarix Studio. Alle Rechte vorbehalten.</p>
-    </footer>
-
-    <!-- Burger-Menü Pop-up -->
-    <div id="burger-menu" class="settings-popup">
-        <button class="settings-close" onclick="closeBurgerMenu()">✖</button>
-        <h3>Menü</h3>
+    <nav class="nav-menu">
         <ul>
             <li><a href="#home">Startseite</a></li>
             <li><a href="#about">Über uns</a></li>
             <li><a href="#services">Dienste</a></li>
             <li><a href="#contact">Kontakt</a></li>
-            <li><button onclick="toggleDarkMode()">Dunkelmodus umschalten</button></li>
+        </ul>
+    </nav>
+
+    <!-- Settings Popup -->
+    <div class="settings-popup">
+        <button class="settings-close">✖️</button>
+        <h2>Einstellungen</h2>
+        <ul>
+            <li><button class="toggle-theme">Dark/Light Mode</button></li>
         </ul>
     </div>
-</body>
 
+    <footer>
+        <p>&copy; 2024 Novarix Studio. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
 </html>
