@@ -15,10 +15,6 @@ settingsIcon.addEventListener('click', () => {
     settingsMenu.classList.toggle('hidden');
 });
 
-settingsClose.addEventListener('click', () => {
-    settingsMenu.classList.add('hidden');
-});
-
 // Dark Mode Umschalten
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
