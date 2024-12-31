@@ -1,10 +1,8 @@
-/* Grundlegende Stile */
+/* Grundlegendes Layout */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -17,16 +15,15 @@ header {
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-top: 10px;
+    font-size: 2rem;
+    margin: 0;
 }
 
 /* Navigation */
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 .nav-toggle {
@@ -43,6 +40,14 @@ h1 {
     height: 4px;
     margin: 5px 0;
     transition: all 0.3s ease;
+}
+
+.settings-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
 }
 
 /* Burger Menü */
@@ -69,6 +74,10 @@ h1 {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #2c3e50;
 }
 
 /* Dark Mode */
@@ -112,7 +121,7 @@ h1 {
     color: #f0f0f0;
 }
 
-/* Einstellungen Pop-up sichtbar */
+/* Settings Pop-up sichtbar */
 .settings-popup.show {
     opacity: 1;
     visibility: visible;
@@ -126,7 +135,6 @@ h1 {
     font-size: 25px;
     cursor: pointer;
     color: #333;
-    font-weight: bold;
 }
 
 .dark-mode .settings-close {
@@ -142,22 +150,10 @@ h1 {
     }
 }
 
-/* Burger Menü Text */
-.nav-menu a {
-    text-decoration: none;
-    color: #333;
-}
-
-.dark-mode .nav-menu a {
-    color: #f0f0f0;
-}
-
-/* Burger Menü im Dark Mode */
-.dark-mode .nav-toggle span {
-    background-color: #f0f0f0;
-}
-
-/* Burger Menü im Light Mode */
 .nav-toggle span {
     background-color: #333;
+}
+
+.dark-mode .nav-toggle span {
+    background-color: #f0f0f0;
 }
