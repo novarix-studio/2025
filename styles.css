@@ -8,32 +8,58 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Navigation */
-.navbar {
+.header-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 .nav-brand {
     font-size: 1.5rem;
+    text-align: center;
     color: #fff;
 }
 
 .nav-menu {
-    display: flex;
+    display: none;
     list-style: none;
-    gap: 15px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
 }
 
 .nav-menu li a {
-    color: #fff;
     text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        background: none;
+    }
+
+    .nav-menu li a {
+        color: #fff;
+    }
 }
 
 /* Burger-Menü */
@@ -49,56 +75,42 @@ header {
     width: 25px;
     height: 3px;
     background-color: #fff;
+    transition: background-color 0.3s;
 }
 
-.nav-menu {
-    display: none;
-}
-
-.nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #333;
-    padding: 10px;
-}
-
-@media (min-width: 769px) {
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-    }
+body.dark-mode .nav-toggle span {
+    background-color: #000;
 }
 
 /* Einstellungen */
 .settings-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #333;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .settings-icon:after {
     content: '\2699';
-    font-size: 24px;
-    color: #fff;
+    font-size: 18px;
+    color: #333;
 }
 
 .settings-menu {
     position: fixed;
-    bottom: 80px;
-    right: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: none;
     z-index: 1000;
@@ -114,11 +126,11 @@ body.dark-mode {
     color: #fff;
 }
 
-body.dark-mode header,
-body.dark-mode footer {
-    background-color: #222;
+body.dark-mode .settings-menu {
+    background-color: #333;
+    color: #fff;
 }
 
-body.dark-mode .nav-menu li a {
-    color: #ddd;
+body.dark-mode .settings-icon {
+    background-color: #000;
 }
