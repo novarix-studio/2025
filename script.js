@@ -1,4 +1,4 @@
-// Toggle für den Dark Mode
+// Toggle für den  Dark Mode
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     // Speichern des Themas
