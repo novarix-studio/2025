@@ -1,87 +1,76 @@
-/* Reset */
-body, h1, h2, p, ul, li, a, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
-}
-
-.dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode header {
-    background-color: #1e1e1e;
-}
-
-.nav-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.nav-toggle span {
-    background-color: #333;
-    height: 3px;
-    width: 100%;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    width: 50%;
-}
-
-.nav-menu.hidden {
-    display: none;
-}
-
+/* Einstellungen-Zahnrad */
 .settings-icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: url('settings-icon.png') no-repeat center center;
+    background-size: contain;
+    position: fixed;
+    top: 15px;
+    left: 15px;
     cursor: pointer;
+    z-index: 1000;
 }
 
+.dark-mode .settings-icon {
+    filter: invert(1); /* Umkehrung für bessere Sichtbarkeit im Dark Mode */
+}
+
+/* Pop-up-Menü für Einstellungen */
 .settings-menu {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 300px;
-    height: 200px;
+    padding: 20px;
     background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    z-index: 1001;
+}
+
+.dark-mode .settings-menu {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+/* Schließen-Button im Einstellungs-Popup */
+.settings-close {
+    background: none;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.dark-mode .settings-close {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
+/* Dark Mode Umschalter */
+.dark-mode-toggle {
+    background: none;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode .dark-mode-toggle {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
+/* Einstellungen-Zahnrad sichtbar machen */
+.settings-icon {
+    opacity: 1; /* Immer sichtbar */
 }
 
 .hidden {
