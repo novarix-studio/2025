@@ -3,6 +3,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
 navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
     navMenu.classList.toggle('active');
 });
 
@@ -13,6 +14,10 @@ const settingsClose = document.getElementById('settings-close');
 
 settingsIcon.addEventListener('click', () => {
     settingsMenu.classList.toggle('hidden');
+});
+
+settingsClose.addEventListener('click', () => {
+    settingsMenu.classList.add('hidden');
 });
 
 // Dark Mode Umschalten
