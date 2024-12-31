@@ -38,7 +38,7 @@ header {
 
 /* Burger-Menü */
 .nav-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -51,16 +51,22 @@ header {
     background-color: #fff;
 }
 
-@media (max-width: 768px) {
+.nav-menu {
+    display: none;
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+}
+
+@media (min-width: 769px) {
     .nav-menu {
-        display: none;
-        flex-direction: column;
-    }
-    .nav-menu.active {
         display: flex;
-    }
-    .nav-toggle {
-        display: flex;
+        flex-direction: row;
     }
 }
 
@@ -69,11 +75,20 @@ header {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: #333;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+}
+
+.settings-icon:after {
+    content: '\2699';
+    font-size: 24px;
+    color: #fff;
 }
 
 .settings-menu {
@@ -84,8 +99,9 @@ header {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 20px;
     display: none;
+    z-index: 1000;
 }
 
 .settings-menu.hidden {
