@@ -4,28 +4,45 @@ const navMenu = document.querySelector('.nav-menu');
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    navToggle.querySelectorAll('span').forEach(span => span.classList.toggle('active'));
 });
 
-// Script für den Umschalter zwischen Dark- und Light-Mode
-const toggleButton = document.querySelector('.dark-mode-toggle');
+// Zahnrad-Popup
+const settingsIcon = document.getElementById('settings-icon');
+const settingsPopup = document.getElementById('settings-popup');
+const overlay = document.getElementById('overlay');
+const closeButton = document.getElementById('settings-close');
+
+settingsIcon.addEventListener('click', () => {
+    settingsPopup.classList.add('active');
+    overlay.classList.add('active');
+});
+
+closeButton.addEventListener('click', () => {
+    settingsPopup.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+overlay.addEventListener('click', () => {
+    settingsPopup.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+// Darkmode umschalten
+const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
 
-// Prüfen, ob der Dark-Mode in localStorage gespeichert ist und anwenden
-window.addEventListener('load', () => {
-    if (localStorage.getItem('theme') === 'dark') {
+// Darkmode aus LocalStorage laden
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+}
+
+darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
         body.classList.add('dark-mode');
-    }
-});
-
-// Beim Klick den Dark-Mode umschalten und speichern
-toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-
-    // Speichern des Modus in localStorage
-    if (body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
     } else {
+        body.classList.remove('dark-mode');
         localStorage.removeItem('theme');
     }
 });
