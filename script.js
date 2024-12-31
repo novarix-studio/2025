@@ -1,4 +1,4 @@
-// Navigation umschalten
+// Burger-Menü Umschalten
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -6,43 +6,30 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Zahnrad-Popup
+// Einstellungen öffnen/schließen
 const settingsIcon = document.getElementById('settings-icon');
-const settingsPopup = document.getElementById('settings-popup');
-const overlay = document.getElementById('overlay');
-const closeButton = document.getElementById('settings-close');
+const settingsMenu = document.getElementById('settings-menu');
+const settingsClose = document.getElementById('settings-close');
 
 settingsIcon.addEventListener('click', () => {
-    settingsPopup.classList.add('active');
-    overlay.classList.add('active');
+    settingsMenu.classList.toggle('hidden');
 });
 
-closeButton.addEventListener('click', () => {
-    settingsPopup.classList.remove('active');
-    overlay.classList.remove('active');
+settingsClose.addEventListener('click', () => {
+    settingsMenu.classList.add('hidden');
 });
 
-overlay.addEventListener('click', () => {
-    settingsPopup.classList.remove('active');
-    overlay.classList.remove('active');
-});
-
-// Darkmode umschalten
+// Dark Mode Umschalten
 const darkModeToggle = document.getElementById('dark-mode-toggle');
-const body = document.body;
 
-// Darkmode aus LocalStorage laden
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    darkModeToggle.checked = true;
-}
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+});
 
-darkModeToggle.addEventListener('change', () => {
-    if (darkModeToggle.checked) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        body.classList.remove('dark-mode');
-        localStorage.removeItem('theme');
+// Dark Mode Zustand laden
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('dark-mode') === 'true') {
+        document.body.classList.add('dark-mode');
     }
 });
