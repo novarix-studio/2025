@@ -29,24 +29,11 @@ h1 {
     position: relative;
 }
 
-.nav-menu {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu li {
-    display: inline-block;
-}
-
-.nav-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
 .nav-toggle {
-    display: none;
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .nav-toggle span {
@@ -72,38 +59,7 @@ h1 {
     color: #f0f0f0;
 }
 
-.dark-mode .settings-icon {
-    filter: invert(1);
-}
-
-/* Burger-Menü */
-.nav-menu.active {
-    display: block;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.nav-menu li {
-    margin: 5px 0;
-}
-
-/* Pop-up für Einstellungen */
-.settings-icon {
-    width: 40px;
-    height: 40px;
-    background: url('settings-icon.png') no-repeat center center;
-    background-size: contain;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
+/* Pop-up für Burger-Menü */
 .settings-popup {
     position: fixed;
     top: 50%;
@@ -143,7 +99,25 @@ h1 {
     color: #f0f0f0;
 }
 
-.hidden {
-    visibility: hidden;
-    opacity: 0;
+/* Burger-Menü Pop-up sichtbar */
+.settings-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Burger-Menü */
+@media (max-width: 768px) {
+    .settings-popup {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .settings-popup ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .settings-popup li {
+        margin-bottom: 15px;
+    }
 }
