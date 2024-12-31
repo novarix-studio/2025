@@ -10,15 +10,15 @@ header {
     color: #fff;
     padding: 10px 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 .header-container {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .nav-brand {
@@ -30,12 +30,16 @@ header {
 .nav-menu {
     display: none;
     list-style: none;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
     margin: 0;
     padding: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
     background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu li a {
@@ -45,24 +49,14 @@ header {
     display: block;
 }
 
+.nav-menu.hidden {
+    display: none;
+}
+
 .nav-menu.active {
     display: flex;
 }
 
-@media (min-width: 769px) {
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        background: none;
-    }
-
-    .nav-menu li a {
-        color: #fff;
-    }
-}
-
-/* Burger-Menü */
 .nav-toggle {
     display: flex;
     flex-direction: column;
@@ -78,8 +72,10 @@ header {
     transition: background-color 0.3s;
 }
 
-body.dark-mode .nav-toggle span {
-    background-color: #000;
+/* Dark Mode */
+body.dark-mode .nav-menu li a {
+    color: #fff;
+    background-color: #333;
 }
 
 /* Einstellungen */
@@ -118,19 +114,4 @@ body.dark-mode .nav-toggle span {
 
 .settings-menu.hidden {
     display: none;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
-}
-
-body.dark-mode .settings-menu {
-    background-color: #333;
-    color: #fff;
-}
-
-body.dark-mode .settings-icon {
-    background-color: #000;
 }
