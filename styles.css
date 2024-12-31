@@ -3,37 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-header, footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1, h2 {
-    margin: 20px 0;
-}
-
-/* Hinweis Text - Zentrierung und Abstand */
-#about {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-#about h2 {
-    margin-bottom: 15px;
-}
-
-#about p {
-    font-size: 1.1rem;
     line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
 }
 
 /* Navigation */
@@ -41,177 +17,114 @@ h1, h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333333;
-    color: #ffffff;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
-
-.navbar .nav-brand {
-    margin-left: 20px;
-}
-
-.navbar .nav-brand a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.5rem;
 }
 
 .nav-menu {
+    list-style: none;
     display: flex;
     gap: 15px;
-    list-style: none;
-    margin-left: auto;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-toggle {
-    display: none; /* Standardmäßig ausblenden */
-    flex-direction: column;
-    gap: 5px;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.nav-toggle span {
-    display: block;
-    height: 4px;
-    background-color: #ffffff;
-}
-
-.nav-toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 7px;
-}
-
-.nav-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    bottom: 7px;
-}
-
-.nav-menu.active {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #333333;
-    padding: 10px;
     display: none;
 }
 
-.nav-menu.active a {
-    display: block;
-    padding: 10px;
-    border-bottom: 1px solid #444;
-}
-
-.nav-menu a:hover {
-    background-color: #555555;
-}
-
-/* Auf kleineren Bildschirmen */
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
-        display: none; /* Standardmäßig ausgeblendet */
-    }
-
-    .nav-toggle {
-        display: flex; /* Burger-Menü anzeigen */
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 20px;
     }
 
     .nav-menu.active {
-        display: block;
+        display: flex;
     }
 
-    /* Umschalter für Dunkelmodus */
-    .dark-mode-toggle {
-        bottom: 80px; /* Damit der Button nicht zu nah am Rand ist */
+    .nav-toggle {
+        display: flex;
     }
 }
 
-/* Umschalter für Dunkelmodus */
-.dark-mode-toggle {
+/* Zahnrad-Icon */
+.settings-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 10px;
-    background-color: #333333;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
     width: 50px;
     height: 50px;
+    background-color: #333;
+    border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s;
 }
 
-#sun-icon {
+.settings-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Popup */
+.settings-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.settings-popup.active {
     display: block;
 }
 
-#moon-icon {
-    display: none;
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
 }
 
-body.dark-mode #sun-icon {
-    display: none;
+.settings-header h2 {
+    margin: 0;
+    font-size: 1.2em;
 }
 
-body.dark-mode #moon-icon {
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Überlagerung */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
     display: block;
-}
-
-body.dark-mode {
-    background-color: #1e1e1e;
-    color: #eaeaea;
-}
-
-/* Farben und Hintergründe für den Dark-Mode */
-body.dark-mode header,
-body.dark-mode footer {
-    background-color: #333333;
-    color: #eaeaea;
-}
-
-body.dark-mode .navbar {
-    background-color: #222222;
-    color: #eaeaea;
-}
-
-body.dark-mode .nav-menu a {
-    color: #eaeaea;
-}
-
-body.dark-mode .nav-menu a:hover {
-    background-color: #444444;
-}
-
-body.dark-mode #about h2,
-body.dark-mode #about p {
-    color: #eaeaea;
-}
-
-/* Übergänge für das Umschalten */
-body, header, footer {
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
