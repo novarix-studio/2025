@@ -1,4 +1,4 @@
-// Toggle für den Dark Mode
+// Funktion zum Umschalten des Dark Modes
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     // Speichern des Themas
@@ -16,28 +16,14 @@ window.addEventListener('load', () => {
     }
 });
 
-// Burger Menü Umschaltung
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+// Funktion zum Öffnen des Burger-Menüs
+function toggleBurgerMenu() {
+    const burgerMenu = document.getElementById('burger-menu');
+    burgerMenu.classList.toggle('show');
+}
 
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.querySelectorAll('span').forEach(span => span.classList.toggle('active'));
-});
-
-// Einstellungen Pop-up
-const settingsIcon = document.getElementById('settings-icon');
-const settingsPopup = document.getElementById('settings-popup');
-const settingsClose = document.getElementById('settings-close');
-
-// Öffnen des Pop-ups
-settingsIcon.addEventListener('click', () => {
-    settingsPopup.style.visibility = 'visible';
-    settingsPopup.style.opacity = 1;
-});
-
-// Schließen des Pop-ups
-settingsClose.addEventListener('click', () => {
-    settingsPopup.style.visibility = 'hidden';
-    settingsPopup.style.opacity = 0;
-});
+// Funktion zum Schließen des Burger-Menüs
+function closeBurgerMenu() {
+    const burgerMenu = document.getElementById('burger-menu');
+    burgerMenu.classList.remove('show');
+}
