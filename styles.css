@@ -1,4 +1,4 @@
-/* Grundlegende  Stile */
+/* Grundlegende Stile */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -99,7 +99,7 @@ h1 {
     background-size: contain;
     position: fixed;
     top: 15px;
-    left: 15px;
+    right: 15px;
     cursor: pointer;
     z-index: 1000;
 }
