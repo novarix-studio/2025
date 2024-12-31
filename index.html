@@ -1,74 +1,58 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Novarix Studio bietet professionelle Discord-Bot-Entwicklung, Roleplay-Server und Roblox-Lösungen.">
-    <meta name="keywords" content="Novarix Studio, Discord Bot Entwicklung, Roleplay, Roblox, Bot Entwicklung, deutsche Entwickler, innovative Lösungen">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Novarix Studio, Discord Bot Entwicklung.">
+    <meta name="keywords" content="Novarix Studio, Novarix, Studio, Discord, Bot Entwicklung, German, Roleplay, Roblox">
     <meta name="author" content="Novarix Studio">
-    <title>Novarix Studio - Discord Bot Entwicklung und Roleplay</title>
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Novarix Studio - Discord Bot Entwicklung und Roleplay">
-    <meta property="og:description" content="Professionelle Discord-Bot-Entwicklung, Roleplay-Server und Roblox-Lösungen.">
-    <meta property="og:image" content="https://novarix-studio.de/assets/og-image.png">
+    <meta property="og:title" content="Novarix Studio">
+    <meta property="og:description" content="Professionelle Discord-Bot-Entwicklung und Lösungen für Roleplay und Roblox.">
+    <meta property="og:image" content="https://novarix-studio.de/assets/favicon.png">
     <meta property="og:url" content="https://novarix-studio.de">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Novarix Studio - Discord Bot Entwicklung und Roleplay">
-    <meta name="twitter:description" content="Professionelle Discord-Bot-Entwicklung, Roleplay-Server und Roblox-Lösungen.">
-    <meta name="twitter:image" content="https://novarix-studio.de/assets/og-image.png">
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Novarix Studio",
-        "url": "https://novarix-studio.de",
-        "logo": "https://novarix-studio.de/assets/favicon.png",
-        "description": "Professionelle Discord-Bot-Entwicklung und Lösungen für Roleplay und Roblox.",
-        "sameAs": [
-            "https://twitter.com/novarixstudio",
-            "https://www.facebook.com/novarixstudio"
-        ]
-    }
-    </script>
+    <meta name="twitter:title" content="Novarix Studio">
+    <meta name="twitter:description" content="Professionelle Discord-Bot-Entwicklung und Lösungen für Roleplay und Roblox.">
+    <meta name="twitter:image" content="https://novarix-studio.de/assets/favicon.png">
+    <title>Novarix Studio</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" href="assets/favicon.ico">
 
-    <!-- CSS -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="header-container">
-            <div id="settings-icon" class="settings-icon" aria-label="Einstellungen öffnen"></div>
-            <div class="nav-brand">Novarix Studio</div>
-            <button class="nav-toggle" aria-label="Menü umschalten">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="#">Novarix Studio</a>
+            </div>
+            <button class="nav-toggle" aria-label="Navigation umschalten">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-        </div>
-        <ul class="nav-menu hidden">
-            <li><a href="#home">Startseite</a></li>
-            <li><a href="#about">Über uns</a></li>
-            <li><a href="#services">Dienste</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
+            <ul class="nav-menu">
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Dienste</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <h1>Novarix Studio</h1>
     </header>
 
     <main>
         <section id="about">
-            <h2>Über uns</h2>
-            <p>Diese Website wird derzeit erstellt. Kontakt: kontakt@novarix-studio.de</p>
+            <h2>Hinweis</h2>
+            <p>Diese Website wird derzeit erstellt. Schauen Sie später vorbei: kontakt@novarix-studio.de.</p>
         </section>
     </main>
 
@@ -76,10 +60,17 @@
         <p>&copy; 2024 Novarix Studio. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <!-- Einstellungen -->
-    <div id="settings-menu" class="settings-menu hidden">
-        <button id="dark-mode-toggle" class="dark-mode-toggle">Dark Mode</button>
-        <button id="settings-close" class="settings-close">Schließen</button>
+    <!-- Einstellungen Zahnrad -->
+    <div id="settings-icon" class="settings-icon" aria-label="Einstellungen öffnen"></div>
+
+    <!-- Einstellungs-Pop-up -->
+    <div id="settings-popup" class="settings-popup hidden">
+        <div id="settings-close" class="settings-close">&#10005;</div>
+        <h3>Einstellungen</h3>
+        <div class="dark-mode-toggle">
+            <button onclick="toggleDarkMode()">Dunkelmodus umschalten</button>
+        </div>
     </div>
 </body>
+
 </html>
