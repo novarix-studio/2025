@@ -31,22 +31,13 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="nav-brand">
-                <a href="#">Novarix Studio</a>
-            </div>
-            <button class="nav-toggle" aria-label="Navigation umschalten">
+            <!-- Burger-Menü-Button -->
+            <button class="nav-toggle" aria-label="Navigation umschalten" onclick="toggleBurgerMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="#home">Startseite</a></li>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#services">Dienste</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
         </nav>
-        <h1>Novarix Studio</h1>
     </header>
 
     <main>
@@ -60,16 +51,17 @@
         <p>&copy; 2024 Novarix Studio. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <!-- Einstellungen Zahnrad -->
-    <div id="settings-icon" class="settings-icon" aria-label="Einstellungen öffnen"></div>
-
-    <!-- Einstellungs-Pop-up -->
-    <div id="settings-popup" class="settings-popup hidden">
-        <div id="settings-close" class="settings-close">&#10005;</div>
-        <h3>Einstellungen</h3>
-        <div class="dark-mode-toggle">
-            <button onclick="toggleDarkMode()">Dunkelmodus umschalten</button>
-        </div>
+    <!-- Burger-Menü Pop-up -->
+    <div id="burger-menu" class="settings-popup">
+        <button class="settings-close" onclick="closeBurgerMenu()">✖</button>
+        <h3>Menü</h3>
+        <ul>
+            <li><a href="#home">Startseite</a></li>
+            <li><a href="#about">Über uns</a></li>
+            <li><a href="#services">Dienste</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><button onclick="toggleDarkMode()">Dunkelmodus umschalten</button></li>
+        </ul>
     </div>
 </body>
 
