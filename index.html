@@ -16,30 +16,40 @@
                 <span></span>
                 <span></span>
             </button>
-            <button class="settings-toggle" aria-label="Einstellungen umschalten" aria-expanded="false">⚙️</button>
         </div>
+        <nav class="nav-menu" aria-label="Hauptnavigation">
+            <a href="#home">Startseite</a>
+            <a href="#about">Über uns</a>
+            <a href="#services">Dienste</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
     </header>
-    <nav class="nav-menu" aria-label="Hauptnavigation">
-        <ul>
-            <li><a href="#home">Startseite</a></li>
-            <li><a href="#about">Über uns</a></li>
-            <li><a href="#services">Dienste</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
-    <div class="settings-popup" role="dialog" aria-hidden="true">
-        <button class="settings-close" aria-label="Einstellungen schließen">✖️</button>
-        <h2>Einstellungen</h2>
-        <button class="toggle-theme">Dark/Light Mode</button>
-    </div>
     <main>
         <section id="home">
             <h2>Willkommen</h2>
             <p>Discord-Bot-Entwicklung für Roleplay.</p>
         </section>
+        <section id="about">
+            <h2>Über uns</h2>
+            <p>Erfahren Sie mehr über unsere Geschichte und unser Team.</p>
+        </section>
+        <section id="services">
+            <h2>Unsere Dienste</h2>
+            <p>Wir bieten maßgeschneiderte Lösungen für Discord Bots und Roblox Roleplay an.</p>
+        </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Sie erreichen uns unter kontakt@novarix-studio.de.</p>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Novarix Studio</p>
     </footer>
+    <!-- Dark/Light Mode Switch -->
+    <div class="mode-switch" aria-label="Dark-/Light-Mode umschalten">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 4.5a1 1 0 011-1h0a1 1 0 011 1V6a1 1 0 01-2 0zM4.5 12a1 1 0 01-1-1v0a1 1 0 011-1H6a1 1 0 010 2zm8 8a1 1 0 01-1 1v0a1 1 0 01-1-1V18a1 1 0 012 0zm8-8a1 1 0 01-1 1v0a1 1 0 01-1-1h1.5a1 1 0 011 1z"></path>
+        </svg>
+    </div>
 </body>
 </html>
