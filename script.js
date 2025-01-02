@@ -1,3 +1,11 @@
+// Burger Menü Umschalten
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
 // Dark-/Light-Mode Toggle
 const switchButton = document.querySelector('.mode-switch');
 const body = document.body;
