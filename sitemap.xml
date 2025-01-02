@@ -2,17 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://novarix-studio.de/</loc>
-        <lastmod>2025-01-01</lastmod>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
-    <url>
-        <loc>https://novarix-studio.de/partner</loc>
-        <lastmod>2025-01-01</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://novarix-studio.de/ueber-uns</loc>
-        <lastmod>2025-01-01</lastmod>
-        <priority>0.7</priority>
-    </url>
+    <!-- Weitere URLs hier hinzufügen -->
 </urlset>
