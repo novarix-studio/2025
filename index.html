@@ -3,43 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Novarix Studio, Discord Bot Entwicklung.">
-    <meta name="keywords" content="Novarix Studio, Novarix, Studio, Discord, Bot Entwicklung, German, Roleplay, Roblox">
-    <meta name="author" content="Novarix Studio">
     <title>Novarix Studio</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/favicon.ico">
-    
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="navbar">
-            <!-- Brand Name -->
-            <div class="nav-brand">
-                <h1>Novarix Studio</h1>
-            </div>
-            
-            <!-- Burger Menu Toggle -->
-            <button class="nav-toggle" aria-label="Navigation umschalten">
+            <h1>Novarix Studio</h1>
+            <button class="nav-toggle" aria-label="Menü umschalten" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
-            <!-- Settings Button -->
-            <button class="settings-toggle" aria-label="Einstellungen umschalten">⚙️</button>
+            <button class="settings-toggle" aria-label="Einstellungen umschalten" aria-expanded="false">⚙️</button>
         </div>
     </header>
-
-    <!-- Navigation Menu -->
-    <nav class="nav-menu">
+    <nav class="nav-menu" aria-label="Hauptnavigation">
         <ul>
             <li><a href="#home">Startseite</a></li>
             <li><a href="#about">Über uns</a></li>
@@ -47,42 +27,19 @@
             <li><a href="#contact">Kontakt</a></li>
         </ul>
     </nav>
-
-    <!-- Settings Popup -->
-    <div class="settings-popup">
-        <button class="settings-close">✖️</button>
+    <div class="settings-popup" role="dialog" aria-hidden="true">
+        <button class="settings-close" aria-label="Einstellungen schließen">✖️</button>
         <h2>Einstellungen</h2>
-        <ul>
-            <li><button class="toggle-theme">Dark/Light Mode</button></li>
-        </ul>
+        <button class="toggle-theme">Dark/Light Mode</button>
     </div>
-
-    <!-- Main Content -->
     <main>
         <section id="home">
-            <h2>Willkommen bei Novarix Studio</h2>
-            <p>Wir bieten professionelle Discord-Bot-Entwicklungen und Lösungen für Roleplay auf Roblox an.</p>
-        </section>
-
-        <section id="about">
-            <h2>Über uns</h2>
-            <p>Erfahren Sie mehr über unsere Geschichte und unser Team.</p>
-        </section>
-
-        <section id="services">
-            <h2>Unsere Dienste</h2>
-            <p>Wir bieten maßgeschneiderte Lösungen für Discord Bots und Roblox Roleplay an.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Sie erreichen uns unter kontakt@novarix-studio.de.</p>
+            <h2>Willkommen</h2>
+            <p>Discord-Bot-Entwicklung für Roleplay.</p>
         </section>
     </main>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Novarix Studio. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 Novarix Studio</p>
     </footer>
 </body>
 </html>
