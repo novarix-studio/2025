@@ -99,7 +99,7 @@ header {
 }
 
 .dark-mode .icon {
-    fill: black;
+    fill: #333;
 }
 
 /* Dark Mode */
