@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://novarix-studio.de/sitemap.xml
+Sitemap: https://www.novarix-studio.de/sitemap.xml
