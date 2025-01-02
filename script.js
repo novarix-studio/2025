@@ -1,15 +1,17 @@
-// Elemente auswählen
-const modeSwitch = document.querySelector('.mode-switch');
+// Dark-/Light-Mode Toggle
+const switchButton = document.querySelector('.mode-switch');
+const body = document.body;
 
-// Dark/Light Mode umschalten
-modeSwitch.addEventListener('click', () => {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+switchButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
 });
 
-// Modus beim Laden überprüfen
-window.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
+// Load Theme from Local Storage
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
     }
 });
